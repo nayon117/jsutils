@@ -7,48 +7,38 @@ const Documentation = () => {
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
 
-  
-  // Initialize state with URL params
   const [selectedCategory, setSelectedCategory] = useState(urlCategory || '');
   const [selectedMethod, setSelectedMethod] = useState(urlMethod || '');
   const [searchResults, setSearchResults] = useState([]);
+  const [MethodDocumentation, setMethodDocumentation] = useState(null);
   const searchQuery = searchParams.get('search') || '';
-
-  // Update state when URL params change
-  useEffect(() => {
-    if (urlCategory) {
-      setSelectedCategory(urlCategory);
-    }
-    if (urlMethod) {
-      setSelectedMethod(urlMethod);
-    }
-  }, [urlCategory, urlMethod]);
 
   // Documentation structure
   const docs = {
-    'Array': {
-      methods: ['chunk', 'compact', 'concat', 'difference', 'drop', 'filter', 'find', 'map'],
-      description: 'Methods for array manipulation and transformation.'
-    },
-    'Object': {
-      methods: ['assign', 'clone', 'get', 'has', 'keys', 'merge', 'omit', 'pick'],
-      description: 'Utility functions for working with objects.'
-    },
-    'String': {
-      methods: ['camelCase', 'capitalize', 'endsWith', 'escape', 'kebabCase', 'toLowerCase'],
-      description: 'String manipulation and formatting utilities.'
-    },
-    'Function': {
-      methods: ['debounce', 'memoize', 'throttle', 'curry', 'partial', 'compose'],
-      description: 'Function decorators and composition utilities.'
-    }
+    'Array': ['chunk', 'compact'],
+    'Object': ['assign', 'clone'],
+    'String': ['camelCase', 'capitalize'],
+    'Function': ['debounce', 'memoize'],
   };
 
-  // Search functionality
+  useEffect(() => {
+    if (urlCategory && urlMethod) {
+      setSelectedCategory(urlCategory);
+      setSelectedMethod(urlMethod);
+      import(`../docs/${urlCategory.toLowerCase()}/${urlMethod}.jsx`)
+        .then(module => {
+          setMethodDocumentation(() => module.default);
+        })
+        .catch(() => {
+          setMethodDocumentation(null);
+        });
+    }
+  }, [urlCategory, urlMethod]);
+
   useEffect(() => {
     if (searchQuery) {
       const results = [];
-      Object.entries(docs).forEach(([category, { methods }]) => {
+      Object.entries(docs).forEach(([category, methods]) => {
         methods.forEach(method => {
           if (method.toLowerCase().includes(searchQuery.toLowerCase()) ||
               category.toLowerCase().includes(searchQuery.toLowerCase())) {
@@ -116,7 +106,7 @@ const Documentation = () => {
                 </button>
                 {selectedCategory === category && (
                   <div className="ml-4 mt-1 space-y-1">
-                    {docs[category].methods.map(method => (
+                    {docs[category].map(method => (
                       <button
                         key={method}
                         onClick={() => handleMethodClick(category, method)}
@@ -136,19 +126,10 @@ const Documentation = () => {
       </div>
 
       {/* Main Content */}
-      <div className="flex-1 overflow-y-auto">
-        <div className="max-w-4xl mx-auto py-8 px-6">
-          {selectedCategory && selectedMethod ? (
-            <MethodDocumentation
-              category={selectedCategory}
-              method={selectedMethod}
-            />
-          ) : selectedCategory ? (
-            <div className="text-gray-600">
-              <h2 className="text-2xl font-bold mb-4">{selectedCategory}</h2>
-              <p className="mb-4">{docs[selectedCategory].description}</p>
-              <p>Select a method from the sidebar to view its documentation.</p>
-            </div>
+      <div className="flex-1 overflow-hidden">
+        <div className="max-w-4xl mx-auto py-8 px-4 md:px-6">
+          {MethodDocumentation ? (
+            <MethodDocumentation />
           ) : (
             <div className="text-center text-gray-600">
               Select a category and method from the sidebar to view its documentation.
@@ -177,39 +158,5 @@ const Documentation = () => {
     </div>
   );
 };
-const MethodDocumentation = ({ category, method }) => (
-    <div>
-      <h1 className="text-3xl font-bold mb-4">{method}</h1>
-      <div className="prose max-w-none">
-        <p className="text-lg text-gray-600 mb-6">
-          Method from {category} category - Documentation content goes here.
-        </p>
-        <div className="bg-gray-900 rounded-lg p-6 mb-6">
-          <pre className="text-gray-100">
-            <code>{`// Example usage of ${method}
-  const result = JSUtils.${method}([1, 2, 3]);
-  console.log(result);`}</code>
-          </pre>
-        </div>
-        <h2 id="arguments" className="text-xl font-semibold mb-3">Arguments</h2>
-        <ul className="list-disc pl-6 mb-6">
-          <li className="mb-2">
-            <code className="bg-gray-100 px-2 py-1 rounded">array</code> (Array): The array to process
-          </li>
-        </ul>
-        <h2 id="returns" className="text-xl font-semibold mb-3">Returns</h2>
-        <p className="mb-6">(Array): Returns the new array of filtered values.</p>
-        <h2 id="example" className="text-xl font-semibold mb-3">Example</h2>
-        <div className="bg-gray-900 rounded-lg p-6 mb-6">
-          <pre className="text-gray-100">
-            <code>{`// Additional example of ${method}
-  const data = [1, 2, 3, 4, 5];
-  const result = JSUtils.${method}(data);
-  // Result explanation here`}</code>
-          </pre>
-        </div>
-      </div>
-    </div>
-  );
-  
-  export default Documentation;
+
+export default Documentation;

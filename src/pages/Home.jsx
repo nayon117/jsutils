@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useNavigate } from 'react-router-dom';
 import { Book, Code, Terminal } from 'lucide-react';
 
@@ -17,33 +18,33 @@ const Home = () => {
         <div className="space-x-4">
           <button 
             onClick={() => navigate('/docs')}
-            className="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition-colors"
+            className="bg-gray-800 text-green-400 px-3 py-2 rounded transition-colors"
           >
-            Get Started
+            Documentation
           </button>
-          <button 
+          {/* <button 
             onClick={() => navigate('/docs')}
             className="border border-gray-300 text-gray-700 px-6 py-2 rounded-md hover:bg-gray-50 transition-colors"
           >
             Documentation
-          </button>
+          </button> */}
         </div>
       </div>
 
       {/* Features */}
       <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
         <Feature
-          icon={<Book className="h-8 w-8 text-blue-600 mb-4" />}
+          icon={<Book className="h-8 w-8 text-green-800 mb-4" />}
           title="Comprehensive"
           description="Packed with utilities for every programming challenge."
         />
         <Feature
-          icon={<Code className="h-8 w-8 text-blue-600 mb-4" />}
+          icon={<Code className="h-8 w-8 text-green-800 mb-4" />}
           title="Modular"
           description="Import only what you need, keep your bundles small."
         />
         <Feature
-          icon={<Terminal className="h-8 w-8 text-blue-600 mb-4" />}
+          icon={<Terminal className="h-8 w-8 text-green-800 mb-4" />}
           title="Modern"
           description="Built for modern JavaScript, with full TypeScript support."
         />
@@ -65,7 +66,7 @@ const Feature = ({ icon, title, description }) => (
 const CodeExample = () => (
   <div className="mt-16">
     <div className="bg-gray-900 rounded-lg p-6 overflow-x-auto">
-      <pre className="text-gray-100">
+      <pre className="text-green-400">
         <code>{`// Using array methods with a functional approach
 const numbers = [1, 2, 3, 4, 5];
 

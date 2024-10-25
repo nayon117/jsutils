@@ -10,9 +10,10 @@ const App = () => {
         <Nav />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/docs" element={<Documentation />} />
+          {/* <Route path="/docs" element={<Documentation />} />
           <Route path="/docs/:category" element={<Documentation />} />
-          <Route path="/docs/:category/:method" element={<Documentation />} />
+          <Route path="/docs/:category/:method" element={<Documentation />} /> */}
+          <Route path="/docs/:category?/:method?" element={<Documentation />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>

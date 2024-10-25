@@ -26,7 +26,7 @@ const Nav = () => {
               <Menu className="h-6 w-6 text-gray-500" />
             </button>
             <div className="flex-shrink-0 flex items-center">
-              <Link to="/" className="text-2xl font-bold text-blue-600">
+              <Link to="/" className="text-2xl font-bold text-green-800">
                 JSUtils
               </Link>
             </div>
