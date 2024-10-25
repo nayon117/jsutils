@@ -51,7 +51,7 @@ const Nav = () => {
               Docs
             </Link>
             <a 
-              href="https://github.com" 
+              href="https://github.com/nayon117/jsutils" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium"
