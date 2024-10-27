@@ -1,12 +1,20 @@
 /* eslint-disable react/prop-types */
 
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { dracula } from "react-syntax-highlighter/dist/esm/styles/prism";
+
 const CodeBlock = ({ code }) => {
   return (
-    <div className="bg-gray-900 rounded-lg p-4 mb-6">
-      <pre className="text-green-400 overflow-x-auto">
-        <code className="text-sm md:text-base">{code}</code>
-      </pre>
-    </div>
+    <SyntaxHighlighter
+      customStyle={{
+        backgroundColor: "#00212B",
+        margin: "0px",
+      }}
+      language="jsx"
+      style={dracula }
+    >
+      {code}
+    </SyntaxHighlighter>
   );
 };
 

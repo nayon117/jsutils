@@ -19,7 +19,7 @@ const Documentation = () => {
     'Control-Flow':[],
     'Function': ['debounce', 'memoize'],
     'Array': ['push','pop','shift','unshift','map','filter','reduce','find','some','every'],
-    'String': ['camelCase', 'capitalize'],
+    'String': ['charAt', 'concat','includes','slice','splice','subString','toLowerCase','toUpperCase','trim','split'],
     'Object': ['assign', 'clone'],
     'Date': ['assign', 'clone'],
     'Number': ['assign', 'clone'],
@@ -78,8 +78,8 @@ const Documentation = () => {
   return (
     <div className="flex flex-col md:flex-row min-h-[calc(100vh-4rem)]">
       {/* Left Sidebar - Categories */}
-      <div className="w-full md:w-64 bg-gray-50 border-r border-gray-200 overflow-y-auto">
-        <div className="p-4">
+      <div className="w-full md:w-64 bg-gray-50 border-r border-gray-200 md:fixed md:h-[calc(100vh-4rem)] overflow-hidden">
+        <div className="h-full overflow-y-auto scrollbar-thin p-4">
           {searchQuery ? (
             <div className="space-y-2">
               <h3 className="font-semibold text-gray-700">Search Results</h3>
@@ -133,8 +133,8 @@ const Documentation = () => {
         </div>
       </div>
 
-      {/* Main Content */}
-      <div className="flex-1 overflow-hidden">
+      {/* Main Content - with offset to account for fixed sidebar */}
+      <div className="flex-1 md:ml-64 overflow-hidden">
         <div className="max-w-4xl mx-auto py-8 px-4 md:px-6">
           {MethodDocumentation ? (
             <MethodDocumentation />
@@ -152,13 +152,13 @@ const Documentation = () => {
           <h3 className="font-semibold text-gray-900 mb-3">On this page</h3>
           <ul className="space-y-2 text-sm">
             <li>
-              <a href="#arguments" className="text-gray-600 hover:text-gray-900">Arguments</a>
-            </li>
-            <li>
-              <a href="#returns" className="text-gray-600 hover:text-gray-900">Returns</a>
+              <a href="#syntax" className="text-gray-600 hover:text-gray-900">Syntax</a>
             </li>
             <li>
               <a href="#example" className="text-gray-600 hover:text-gray-900">Example</a>
+            </li>
+            <li>
+              <a href="#exercise" className="text-gray-600 hover:text-gray-900">Exercises</a>
             </li>
           </ul>
         </div>

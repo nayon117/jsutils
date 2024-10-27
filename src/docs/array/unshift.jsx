@@ -14,7 +14,7 @@ const UnshiftMethod = () => {
         Use .unshift() when you need to add elements to the start of an array, such as when managing a list of items or implementing a stack.
       </p>
 
-      <h2 className="text-xl font-semibold mb-3">Syntax</h2>
+      <h2 id="syntax" className="text-xl font-semibold mb-3">Syntax</h2>
       <CodeBlock code={`array.unshift(element1, element2, ..., elementN);`} />
 
       <h2 className="text-xl font-semibold mb-3">Parameters</h2>
@@ -27,7 +27,7 @@ const UnshiftMethod = () => {
         Returns the new length of the array after adding the elements.
       </p>
 
-      <h2 className="text-xl font-semibold mb-3">Example</h2>
+      <h2 id="example" className="text-xl font-semibold mb-3">Example</h2>
       <CodeBlock code={`const fruits = ["banana", "orange"];\nconst newLength = fruits.unshift("apple");\nconsole.log(fruits); // Output: ["apple", "banana", "orange"]\nconsole.log(newLength); // Output: 3`} />
 
       <h2 className="text-xl font-semibold mb-3">Problem Solving with .unshift()</h2>
@@ -40,7 +40,7 @@ const UnshiftMethod = () => {
       <p className="my-3">Description: You have an array of user names. Use .unshift() to add a new user at the beginning of the list.</p>
       <CodeBlock code={`const users = ["Bob", "Charlie"];\nusers.unshift("Alice");\nconsole.log(users); // Output: ["Alice", "Bob", "Charlie"]`} />
 
-      <h2 className="text-xl font-semibold mb-3">Exercises</h2>
+      <h2 id="exercise" className="text-xl font-semibold mb-3">Exercises</h2>
       <ul className="list-disc list-inside mb-4">
         <li>Exercise 1: Start with an empty array and use .unshift() to add numbers from 1 to 5 one by one. Check the array after each addition.</li>
         <li className="mt-3">Exercise 2: Given an array of favorite books, use .unshift() to add a new book to the beginning of the array.</li>
