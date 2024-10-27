@@ -17,10 +17,10 @@ const Documentation = () => {
   const docs = {
     'Basic':[],
     'Control-Flow':[],
-    'Function': ['debounce', 'memoize'],
+    'Function': ['bind', 'call','apply','arrowFunction','IIFE','HOF','closure','currying','toString','generator'],
     'Array': ['push','pop','shift','unshift','map','filter','reduce','find','some','every'],
     'String': ['charAt', 'concat','includes','slice','splice','subString','toLowerCase','toUpperCase','trim','split'],
-    'Object': ['assign', 'clone'],
+    'Object': ['keys', 'values','entries','assign','freeze','seal','hasOwnProperty','create','defineProperty','fromEntries','delete'],
     'Date': ['assign', 'clone'],
     'Number': ['assign', 'clone'],
     'Math': ['assign', 'clone'],
