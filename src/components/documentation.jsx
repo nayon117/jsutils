@@ -15,10 +15,18 @@ const Documentation = () => {
 
   // Documentation structure
   const docs = {
-    'Array': ['chunk', 'compact'],
-    'Object': ['assign', 'clone'],
-    'String': ['camelCase', 'capitalize'],
+    'Basic':[],
+    'Control-Flow':[],
     'Function': ['debounce', 'memoize'],
+    'Array': ['push','pop','shift','unshift','map','filter','reduce','find','some','every'],
+    'String': ['camelCase', 'capitalize'],
+    'Object': ['assign', 'clone'],
+    'Date': ['assign', 'clone'],
+    'Number': ['assign', 'clone'],
+    'Math': ['assign', 'clone'],
+    'JSON': ['assign', 'clone'],
+    'Regex': ['assign', 'clone'],
+    'DOM': ['assign', 'clone'],
   };
 
   useEffect(() => {
