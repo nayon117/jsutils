@@ -21,7 +21,7 @@ const Documentation = () => {
     'Array': ['push','pop','shift','unshift','map','filter','reduce','find','some','every'],
     'String': ['charAt', 'concat','includes','slice','splice','subString','toLowerCase','toUpperCase','trim','split'],
     'Object': ['keys', 'values','entries','assign','freeze','seal','hasOwnProperty','create','defineProperty','fromEntries','delete'],
-    'Date': ['dateNow', 'clone'],
+    'Date': ['dateNow', 'newDate','getFullYear'],
     'Number': ['assign', 'clone'],
     'Math': ['assign', 'clone'],
     'JSON': ['assign', 'clone'],
