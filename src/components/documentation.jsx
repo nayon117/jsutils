@@ -15,18 +15,16 @@ const Documentation = () => {
 
   // Documentation structure
   const docs = {
-    'Basic':[],
-    'Control-Flow':[],
+    'Basic':['basic'],
+    'control_flow':['ifelse','switch','for','while','do_while','break','continue','try_catch','throw','finally'],
     'Function': ['bind', 'call','apply','arrowFunction','IIFE','HOF','closure','currying','toString','generator'],
-    'Array': ['push','pop','shift','unshift','map','filter','reduce','find','some','every'],
+    'Array': ['push','pop','shift','unshift','map','forEach','filter','find','reduce','some','every'],
     'String': ['charAt', 'concat','includes','slice','splice','subString','toLowerCase','toUpperCase','trim','split'],
-    'Object': ['keys', 'values','entries','assign','freeze','seal','hasOwnProperty','create','defineProperty','fromEntries','delete'],
+    'Object': ['keys', 'values','entries','assign','freeze','seal','hasOwnProperty','create','defineProperty','fromEntries','delete','stringify','parse'],
     'Date': ['dateNow', 'newDate','getFullYear','getMonth','getDate','getDay','getHours','getMinutes','getSeconds','toLocaleDateString'],
     'Number': ['parseInt', 'parseFloat','isInteger','isNaN','toFixed','toPrecision','toExponential','floor','ceil','random','max','min','round','pow','sqrt','abs','trunc'],
-    'Math': ['assign', 'clone'],
-    'JSON': ['assign', 'clone'],
-    'Regex': ['assign', 'clone'],
-    'DOM': ['assign', 'clone'],
+    'Regex': ['test', 'exec','match','replace','classes','quantifiers','anchors','flags'],
+    'DOM': ['getElementById', 'querySelector','querySelectorAll','innerText','innerHTML','add','remove','addEventListener','removeEventListener','appendChild'],
   };
 
   useEffect(() => {
