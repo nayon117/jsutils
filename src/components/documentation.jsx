@@ -22,7 +22,7 @@ const Documentation = () => {
     'String': ['charAt', 'concat','includes','slice','splice','subString','toLowerCase','toUpperCase','trim','split'],
     'Object': ['keys', 'values','entries','assign','freeze','seal','hasOwnProperty','create','defineProperty','fromEntries','delete'],
     'Date': ['dateNow', 'newDate','getFullYear','getMonth','getDate','getDay','getHours','getMinutes','getSeconds','toLocaleDateString'],
-    'Number': ['parseInt', 'parseFloat','isInteger','isNaN','toFixed','toPrecision','toExponential','floor','ceil','random','max'],
+    'Number': ['parseInt', 'parseFloat','isInteger','isNaN','toFixed','toPrecision','toExponential','floor','ceil','random','max','round'],
     'Math': ['assign', 'clone'],
     'JSON': ['assign', 'clone'],
     'Regex': ['assign', 'clone'],
