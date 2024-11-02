@@ -1,6 +1,6 @@
 import CodeBlock from "../../components/codeBlock";
 
-const PushMethod = () => {
+const pushMethod = () => {
   return (
     <div>
       <h1 className="text-3xl font-bold mb-4">.push()</h1>
@@ -49,4 +49,4 @@ const PushMethod = () => {
   );
 };
 
-export default PushMethod;
+export default pushMethod;

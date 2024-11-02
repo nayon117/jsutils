@@ -1,6 +1,6 @@
 import CodeBlock from "../../components/codeBlock";
 
-const ClassListRemove = () => {
+const classListRemove = () => {
   return (
     <div>
       <h1 className="text-3xl font-bold mb-4">.classList.remove()</h1>
@@ -29,4 +29,4 @@ const ClassListRemove = () => {
   );
 };
 
-export default ClassListRemove;
+export default classListRemove;

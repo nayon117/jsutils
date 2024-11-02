@@ -1,6 +1,6 @@
 import CodeBlock from "../../components/codeBlock";
 
-const ContinueStatement = () => {
+const continueStatement = () => {
   return (
     <div>
       <h1 className="text-3xl font-bold mb-4">continue Statement</h1>
@@ -29,4 +29,4 @@ const ContinueStatement = () => {
   );
 };
 
-export default ContinueStatement;
+export default continueStatement;

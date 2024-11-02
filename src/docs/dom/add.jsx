@@ -1,6 +1,6 @@
 import CodeBlock from "../../components/codeBlock";
 
-const ClassListAdd = () => {
+const classListAdd = () => {
   return (
     <div>
       <h1 className="text-3xl font-bold mb-4">.classList.add()</h1>
@@ -29,4 +29,4 @@ const ClassListAdd = () => {
   );
 };
 
-export default ClassListAdd;
+export default classListAdd;

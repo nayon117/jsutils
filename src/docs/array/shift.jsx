@@ -1,6 +1,6 @@
 import CodeBlock from "../../components/codeBlock";
 
-const ShiftMethod = () => {
+const shiftMethod = () => {
   return (
     <div>
       <h1 className="text-3xl font-bold mb-4">.shift()</h1>
@@ -47,4 +47,4 @@ const ShiftMethod = () => {
   );
 };
 
-export default ShiftMethod;
+export default shiftMethod;

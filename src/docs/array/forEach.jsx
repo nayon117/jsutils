@@ -1,6 +1,6 @@
 import CodeBlock from "../../components/codeBlock";
 
-const ForEachMethod = () => {
+const forEachMethod = () => {
   return (
     <div>
       <h1 className="text-3xl font-bold mb-4">JavaScript Array forEach Method</h1>
@@ -86,4 +86,4 @@ const ForEachMethod = () => {
   );
 };
 
-export default ForEachMethod;
+export default forEachMethod;

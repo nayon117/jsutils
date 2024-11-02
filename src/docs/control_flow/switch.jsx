@@ -1,6 +1,6 @@
 import CodeBlock from "../../components/codeBlock";
 
-const Switch = () => {
+const switchStatement = () => {
   return (
     <div>
       <h1 className="text-3xl font-bold mb-4">switch Statement</h1>
@@ -29,4 +29,4 @@ const Switch = () => {
   );
 };
 
-export default Switch;
+export default switchStatement;

@@ -1,6 +1,6 @@
 import CodeBlock from "../../components/codeBlock";
 
-const UnshiftMethod = () => {
+const unshiftMethod = () => {
   return (
     <div>
       <h1 className="text-3xl font-bold mb-4">.unshift()</h1>
@@ -49,4 +49,4 @@ const UnshiftMethod = () => {
   );
 };
 
-export default UnshiftMethod;
+export default unshiftMethod;

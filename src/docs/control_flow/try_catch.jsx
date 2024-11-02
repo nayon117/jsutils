@@ -1,6 +1,6 @@
 import CodeBlock from "../../components/codeBlock";
 
-const TryCatch = () => {
+const tryCatch = () => {
   return (
     <div>
       <h1 className="text-3xl font-bold mb-4">try...catch Statement</h1>
@@ -29,4 +29,4 @@ const TryCatch = () => {
   );
 };
 
-export default TryCatch;
+export default tryCatch;

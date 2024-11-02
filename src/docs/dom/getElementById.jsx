@@ -1,6 +1,6 @@
 import CodeBlock from "../../components/codeBlock";
 
-const GetElementById = () => {
+const getElementById = () => {
   return (
     <div>
       <h1 className="text-3xl font-bold mb-4">document.getElementById()</h1>
@@ -34,4 +34,4 @@ const GetElementById = () => {
   );
 };
 
-export default GetElementById;
+export default getElementById;

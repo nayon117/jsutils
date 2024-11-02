@@ -1,10 +1,9 @@
 import CodeBlock from "../../components/codeBlock";
 
-const PopMethod = () => {
+const popMethod = () => {
   return (
     <div>
       <h1 className="text-3xl font-bold mb-4">.pop()</h1>
-
       <p className="text-lg text-gray-600 mb-6">
         The .pop() method removes the last element from an array and returns that element. This method changes the length of the array.
       </p>
@@ -47,4 +46,4 @@ const PopMethod = () => {
   );
 };
 
-export default PopMethod;
+export default popMethod;

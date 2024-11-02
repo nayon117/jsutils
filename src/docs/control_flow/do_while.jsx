@@ -1,6 +1,6 @@
 import CodeBlock from "../../components/codeBlock";
 
-const DoWhileLoop = () => {
+const doWhileLoop = () => {
   return (
     <div>
       <h1 className="text-3xl font-bold mb-4">do...while Loop</h1>
@@ -29,4 +29,4 @@ const DoWhileLoop = () => {
   );
 };
 
-export default DoWhileLoop;
+export default doWhileLoop;

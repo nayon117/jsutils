@@ -1,6 +1,6 @@
 import CodeBlock from "../../components/codeBlock";
 
-const IfElse = () => {
+const ifElse = () => {
   return (
     <div>
       <h1 className="text-3xl font-bold mb-4">if-else Statement</h1>
@@ -29,4 +29,4 @@ const IfElse = () => {
   );
 };
 
-export default IfElse;
+export default ifElse;

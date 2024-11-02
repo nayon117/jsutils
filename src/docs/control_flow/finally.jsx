@@ -1,6 +1,6 @@
 import CodeBlock from "../../components/codeBlock";
 
-const FinallyStatement = () => {
+const finallyStatement = () => {
   return (
     <div>
       <h1 className="text-3xl font-bold mb-4">finally Statement</h1>
@@ -29,4 +29,4 @@ const FinallyStatement = () => {
   );
 };
 
-export default FinallyStatement;
+export default finallyStatement;

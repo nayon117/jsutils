@@ -1,6 +1,6 @@
 import CodeBlock from "../../components/codeBlock";
 
-const BreakStatement = () => {
+const breakStatement = () => {
   return (
     <div>
       <h1 className="text-3xl font-bold mb-4">break Statement</h1>
@@ -29,4 +29,4 @@ const BreakStatement = () => {
   );
 };
 
-export default BreakStatement;
+export default breakStatement;

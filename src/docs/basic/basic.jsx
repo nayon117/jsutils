@@ -1,6 +1,6 @@
 import CodeBlock from "../../components/codeBlock";
 
-const JavaScriptBasics = () => {
+const basics = () => {
   return (
     <div>
       <h1 className="text-3xl font-bold mb-4">JavaScript Basics</h1>
@@ -109,4 +109,4 @@ const JavaScriptBasics = () => {
   );
 };
 
-export default JavaScriptBasics;
+export default basics;

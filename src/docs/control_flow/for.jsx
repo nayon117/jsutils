@@ -1,6 +1,6 @@
 import CodeBlock from "../../components/codeBlock";
 
-const ForLoop = () => {
+const forLoop = () => {
   return (
     <div>
       <h1 className="text-3xl font-bold mb-4">for Loop</h1>
@@ -29,4 +29,4 @@ const ForLoop = () => {
   );
 };
 
-export default ForLoop;
+export default forLoop;

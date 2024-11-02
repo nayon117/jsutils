@@ -1,6 +1,6 @@
 import CodeBlock from "../../components/codeBlock";
 
-const AddEventListener = () => {
+const addEventListener = () => {
   return (
     <div>
       <h1 className="text-3xl font-bold mb-4">.addEventListener()</h1>
@@ -29,4 +29,4 @@ const AddEventListener = () => {
   );
 };
 
-export default AddEventListener;
+export default addEventListener;

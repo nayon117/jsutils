@@ -1,6 +1,6 @@
 import CodeBlock from "../../components/codeBlock";
 
-const WhileLoop = () => {
+const whileLoop = () => {
   return (
     <div>
       <h1 className="text-3xl font-bold mb-4">while Loop</h1>
@@ -29,4 +29,4 @@ const WhileLoop = () => {
   );
 };
 
-export default WhileLoop;
+export default whileLoop;

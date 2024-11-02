@@ -1,6 +1,6 @@
 import CodeBlock from "../../components/codeBlock";
 
-const ThrowStatement = () => {
+const throwStatement = () => {
   return (
     <div>
       <h1 className="text-3xl font-bold mb-4">throw Statement</h1>
@@ -29,4 +29,4 @@ const ThrowStatement = () => {
   );
 };
 
-export default ThrowStatement;
+export default throwStatement;
